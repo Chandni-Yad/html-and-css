@@ -1,0 +1,34 @@
+.bear-image{
+    width: 100px;
+    height: 100px;
+   object-fit:cover ;
+border-radius: 100px;
+vertical-align:middle ;
+margin-right: 20px;
+
+ }
+ .writtentext{
+    color: rgb(138, 138, 138);
+    font-size: 18px;
+    font-family: Arial;
+vertical-align: middle;
+border: none;
+margin-right: 15px;
+
+
+ }
+ .tweetbutton{
+    color: white;
+    background-color: rgb(110, 110, 248);
+    border:none ;
+    border-radius: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:15px ;
+  padding-right: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  vertical-align: middle;
+  margin-left: 15px;
+  
+ }
