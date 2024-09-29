@@ -1,0 +1,38 @@
+div{
+    font-family: Arial;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    background-color: blueviolet;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:15px ;
+    padding-right: 15px;
+
+    width: 800px;
+    }
+   .Search-text{
+       height: 30px;
+        width:500px ;
+         border: none;
+           border-radius: 35px;
+           margin-top:12px ;
+     margin-bottom: 12px;
+     padding-left: 20px;
+
+   } 
+   button{
+      border-style: solid;
+    border-color: white;
+    color: white;
+       background-color: rgb(171, 94, 243);
+       padding-top: 8px;
+      padding-bottom:8px ;
+    padding-left:15px ;
+    padding-right:15px ;
+    font-weight: solid;
+    font-size: 15px;
+   }
