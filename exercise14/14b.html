@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Document</title>
+     <style>
+
+body{
+    height: 3000px;
+}
+.right-sidebar{
+    position:fixed;  
+    right: 0; 
+     bottom: 0;
+     top: 0; 
+     width: 100px;      
+     background-color: rgb(22, 235, 164);   
+     color: white;                                                                                                                                                              
+}
+.header{
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.modal{
+    
+     padding-top: 30px;
+     padding-left: 20px;
+     padding-bottom: 20px;
+     padding-right: 60px;
+     border-radius: 5px;
+     width: 300px;
+    
+
+     background-color: white;
+}
+.modal-title{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.this-modal{
+    font-family: Arial;
+    margin-bottom: 10px;
+}
+.close-button{
+   border-color: gray;
+   border-style: solid; 
+   color: black;
+   background-color: white;
+   border-radius: 4px;
+   border-width: 2px;
+   width: 60px;
+   font-family: Arial;
+}
+
+     </style>
+</head>
+<body>
+   <div class="right-sidebar">right- sidebar</div> 
+   <div class="header">
+     <div class="modal">
+        <div class="modal-title">Modal Title</div>
+        <div class=" this-modal"> This is modal</div>
+        <button class="close-button">Close</button>
+     </div>
+
+      
+   </div>
+</body>
+</html>
