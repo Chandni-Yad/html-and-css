@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube.com Clone</title>
+
+    
+
+    <style>
+      body{
+        margin: 0;
+        padding-top: 100px;
+        padding-left: 96px;
+         padding-right: 24px;
+      
+      }
+      body{
+        padding-top: 80px;
+        padding-left: 96px;
+        padding-right:24px ;
+        background-color: rgb(248, 248, 248);
+      }
+                                                                  
+      
+      p {
+        font-family: Roboto, Arial;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      
+       .video-info-grid{
+         display: grid;
+         grid-template-columns: 50px 1fr;
+       }
+       
+      .thumbnail {
+        width: 100%;
+        
+        
+      }
+       .video-grid{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr ;
+          column-gap:15px ;
+          row-gap: 35px;
+       }
+       @media (max-width:750px){
+        .video-grid{
+         grid-template-columns: 1fr 1fr;
+        }
+       }
+       @media  (min-width :751px)and(max-width:999px){
+        .video-grid{
+          grid-template-columns: 1fr 1fr 1fr 1fr ;
+        }
+       }
+      .search-bar {
+        display: block;
+    
+      }
+
+      .video-title {
+        margin-top: 0;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        margin-bottom: 10px;
+      }
+    
+     
+
+      
+        
+      .profile-picture {
+        width: 40px;
+        border-radius: 50px;
+      }
+      
+      .thumbnail-row {
+        margin-bottom:12px;
+        position: relative;
+      }
+
+      .video-author,
+      .video-stats {
+        font-size: 12px;
+        color: rgb(96, 96, 96);
+      }
+      
+      .video-author {
+        margin-bottom: 4px;
+      }
+      .left-section{
+       display: flex;
+        
+         align-items: center;
+      }
+     .right-section{
+       justify-content: space-between;
+        display: flex;
+          align-items: center;
+          width: 180px;
+          margin-right: 20px;
+          
+     }
+     .middle-section{
+      flex: 1;
+      
+      margin-left:70px ;
+      margin-right:35px ;
+      max-width: 500px;
+      display: flex;
+      align-items: center;
+     } 
+      .header{
+       display: flex;
+      flex-direction: row;
+      height: 55px;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0  ;
+      background-color: white;
+      border-bottom-width:1px ;
+      border-bottom-style:solid;
+      border-bottom-color:rgb(228, 228, 228);
+      z-index:100;
+       
+      }
+     .hamburger-menu{
+       margin-left:24px ;
+       margin-right:20px ;
+       height: 25px;
+
+     }
+     .youtubelogo{
+       height: 20px;
+
+     }
+     .search-bar{
+     flex: 1;
+     height: 34px;
+        padding-left: 10px;
+        border-color: rgb(192, 192,192);
+        border-style: solid;
+        font-size: 16px;
+        height: 34px;
+        border-width: 1px;
+        border-radius: 2px;
+        box-shadow:inset 1px 2px 3px rgba(0,0,0, 0.05) ;
+        width: 0;
+     }
+     .search-bar::placeholder{
+      font-size: 16px;
+      font-family: Roboto,Arial;
+      
+     }
+     .search-button{
+      height:40px ;
+      width:60px ;
+      border-color: rgb(240, 240, 240);
+      border-width: 1px;
+    border-style: solid;
+    margin-left: -1px;
+    border-radius: 2px;
+    
+    
+     }
+     .voice-search-button,.search-button
+     .upload-text{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+     }
+
+     .voice-search-button{
+      height:40px ;
+      width: 40px;
+      border-radius: 20px;
+      border: none;
+      margin-left: 20px;
+      
+     }
+     .search-icon{
+      height: 25px;
+      margin-top: 4px;
+    
+      
+     }
+     .voice-search-icon{
+        height: 24px;
+       margin-top: 4px;
+        color: rgb(245, 245, 245);
+     }
+      .upload-button{
+        height: 24px;
+      }
+      .youtube-apps{
+        height: 24px;
+      }
+       .notifications-logo{
+
+        height: 24px;
+       }
+       .channel-image{
+        height: 32px;
+        border-radius: 16px;
+       }
+       .sidebar{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: 55px;
+        background-color: white;
+        padding-right: 15px;
+        
+        width: 72px;
+        z-index: 200;
+       }
+       .video-name{
+           font-family: Roboto,Arial;  
+      background-color:black ;
+        font-size: 15px;
+        font-weight: 500;
+        color:white ;
+        position: absolute;
+        bottom: 12px;
+        right:8px;
+        padding-left: 4px;
+padding-right: 4px;
+padding-bottom: 2px;
+  padding-top: 2px; 
+  border-radius: 4%;   
+      }
+      .notifications-count{
+        position: relative;
+
+      }
+      .notify{
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        background-color: rgb(200, 0,0);
+        color: white;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        border-radius: 10px;
+        font-size: 11px;
+        font-family: Roboto,Arial;
+
+
+      }
+      
+         .search-button  .search-text,
+         .voice-search-button  .search-text,
+         .upload-text .search-text{
+       position: absolute;
+       background-color: gray;
+       color: white;
+       padding: 3px  6px;
+       border-radius: 2px;
+       border: -30px;
+       opacity: 0;
+       transition: opacity 0.15s;
+       white-space: nowrap;
+         
+
+      }
+     .search-button .search-text:hover,
+     .voice-search-button .search-text:hover,
+     .upload-text .search-text:hover
+     {
+      opacity: 1;
+       
+      }
+    </style>
+    <link rel="stylesheet" href="icons/icons.css">
+  </head>
+  <body>
+    <div class="header">
+       <div class="left-section">
+        
+      <img  class="hamburger-menu" src="hamburger-menu.svg">
+      <img  class="youtubelogo"   src ="youtube-logo.svg">
+     </div>
+     <div class="middle-section"> 
+      <input class="search-bar" type="text" placeholder="Search">
+        <button class="search-button">
+          <img class="search-icon"  src="search.svg" >
+        <div class="search-text">Search</div>
+        </button> 
+       <button class="voice-search-button"> 
+        <img   class="voice-search-icon" src="voice-search-icon.svg" >
+        <div class="search-text">Search with your voice </div>  </button>
+        
+     </div>
+     
+    
+     <div class="right-section">
+      
+      <div class="upload-text"><img class="upload-button" src="upload.svg" >
+        <div class="search-text">Create</div>
+      </div>
+       <img class="youtube-apps" src="youtube-apps.svg" >
+       
+       
+      <div class="notifications-count">
+       
+        <img  class=" notifications-logo" src="notifications.svg"> 
+      <div class="notify">3</div>
+
+    </div> 
+    <img class="channel-image" src="my-channel.jpeg" >
+      
+     </div>
+    </div>
+      <div class="sidebar">
+        <div class="sidebar-link">
+          <img class="sidebar-icon" src="icons/home (1).svg" >
+         <div class="text-icon"> Home</div>
+        </div>
+        <div class="sidebar-link">
+          <img  class="sidebar-icon" src="icons/explore.svg" >
+        <div class="text-icon">Explore</div>
+        </div>
+        <div class="sidebar-link">
+          <img  class="sidebar-icon" src="icons/subscriptions.svg" >
+          <div class="text-icon">Subscriptions</div>
+        </div>
+        <div class="sidebar-link">
+          <img   class="sidebar-icon"src="icons/originals.svg" >
+          <div class="text-icon">originals</div>
+        </div>
+        <div class="sidebar-link">
+          <img   class="sidebar-icon"src="icons/library.svg">
+          <div class="text-icon">library</div>
+        </div>
+        <div class="sidebar-link">
+          <img  class="sidebar-icon" src="icons/youtube-music.svg" >
+          <div class="text-icon">youtube</div>
+        </div>
+
+
+
+
+
+      </div>
+       
+    
+    <div class="video-grid">
+      <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="thumbnail" src="thumbnail-1.webp">
+        <div class="video-name">14:20</div>
+      </div>
+      <div class="video-info-grid">
+        <div class="channel-picture">
+          <img class="profile-picture" src="channel-1.jpeg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+            Talking Tech and AI with Google CEO Sundar Pichai!
+          </p>
+          <p class="video-author">
+            Marques Brownlee
+          </p>
+          <p class="video-stats">
+            3.4M views &#183; 6 months ago
+          </p>
+        </div>
+      </div>
+    </div>  
+
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="thumbnail" src="thumbnail-2.webp">
+        <div class="video-name">8:20</div>
+      </div>
+      <div  class="video-info-grid">
+        <div class="channel-picture">
+          <img class="profile-picture" src="channel-2.jpeg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+            Try Not To Laugh Challenge #9
+          </p>
+          <p class="video-author">
+            Markiplier
+          </p>
+          <p class="video-stats">
+            19M views &#183; 4 years ago
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="thumbnail" src="thumbnail-3.webp">
+        <div class="video-name">14:20</div>
+      </div>
+      <div  class="video-info-grid">
+        <div class="channel-picture">
+          <img class="profile-picture" src="channel-3.jpeg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+            Try Not To Laugh Challenge #9
+          </p>
+          <p class="video-author">
+            Markiplier
+          </p>
+          <p class="video-stats">
+            19M views &#183; 4 years ago
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="thumbnail" src="thumbnail-4.webp">
+        <div class="video-name">14:20</div>
+      </div>
+      <div class="video-info-grid">
+        <div class="channel-picture">
+          <img class="profile-picture" src="channel-4.jpeg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+            Talking Tech and AI with Google CEO Sundar Pichai!
+          </p>
+          <p class="video-author">
+            Marques Brownlee
+          </p>
+          <p class="video-stats">
+            3.4M views &#183; 6 months ago
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="thumbnail" src="thumbnail-5.webp">
+        <div class="video-name">14:20</div>
+      </div>
+      <div class="video-info-grid">
+        <div class="channel-picture">
+          <img class="profile-picture" src="channel-5.jpeg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+            Talking Tech and AI with Google CEO Sundar Pichai!
+          </p>
+          <p class="video-author">
+            Marques Brownlee
+          </p>
+          <p class="video-stats">
+            3.4M views &#183; 6 months ago
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="thumbnail" src="thumbnail-6.webp">
+        <div class="video-name">14:20</div>
+      </div>
+      <div  class="video-info-grid">
+        <div class="channel-picture">
+          <img class="profile-picture" src="channel-6.jpeg">
+        </div>
+        <div class="video-info">
+          <p class="video-title">
+            Try Not To Laugh Challenge #9
+          </p>
+          <p class="video-author">
+            Markiplier
+          </p>
+          <p class="video-stats">
+            19M views &#183; 4 years ago
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
