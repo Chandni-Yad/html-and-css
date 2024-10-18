@@ -1,0 +1,167 @@
+.body{
+  margin-top: 60px;
+   display: grid;
+   grid-template-columns: 600px 1fr;
+   height: 530px;
+ 
+}
+.text1{
+    
+
+}
+.text2{
+    margin-left: 80px;
+}
+.imagetext{
+    width: 430px;
+    margin-left: 120px;
+    border-radius: 18px;
+}
+.image-product-1{
+  width: 80px;
+  margin-left: 22px;
+  border-radius: 8px;
+  margin-top: 12px;
+} 
+.all-images{
+    margin-left: 120px; 
+}
+.paratext{
+    margin-top: 50px;
+    color: orange;
+
+}
+.paratext1{
+   width: 400px; 
+   font-size: 45px;
+}
+.paratext2{
+   width: 420px;
+   color: rgb(161, 161, 161);
+   line-height: 24px;
+   font-family: Arial;
+   font-size: 15px;
+}
+.price{
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: "Kumbh Sans", sans-serif;
+}
+.discount{
+   font-size: 1em; 
+   font-weight: 700;
+   padding: 5px 10px;
+   background-color: #ffede0;
+   color: #ff7d1a;
+   margin-left: 15px;
+  border-radius: 5px;
+
+}
+.pricetext{
+    display: flex;
+    align-items: center;
+}
+
+.middleprice{
+    margin-left: 120px;
+    color: silver;
+    text-decoration: line-through;
+    font-size: 17px;
+    font-weight: 700;
+    
+}
+.header{
+
+ 
+    margin-right: 80px;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+    border-width: 3px;
+    border: none;
+     align-items: center;
+   margin-left: 120px;
+  border-bottom: 1px  solid rgb(224, 224, 224);
+     
+
+}
+.leftheader{
+     display: flex;
+     flex-direction: row;
+     width:800px;
+      margin-top: 20px;
+     padding-bottom: 30px;
+     align-items: center;
+}
+.header1{
+  font-size: 40px;
+width: 100px;
+font-weight: 700;
+margin-right: 80px;
+}
+.header2{
+   
+  margin-left: 50px;
+  color: rgb(124, 124, 124);
+  
+  font-weight: 200;
+} 
+.image-info{
+  width: 40px;
+  margin-left: 30px;
+}
+.rightheader{
+  display: flex;
+  flex-direction: row;
+  margin-left: 200px;
+
+ 
+}
+.carttext{
+  width: 20px;
+  object-fit: contain;
+
+}
+.buttontext{
+padding: 15px 80px;
+margin-left: 30px;
+border-radius: 8px;
+background-color: rgb(241, 117, 16);
+border: none;
+color: white;
+font-weight: bold;
+box-shadow:0px 10px 10px rgb(248, 188, 166) ;
+}
+.buttontext:hover{
+ opacity: 0.5;
+  transition: 0.8s; 
+  
+}
+.flexbox{
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  align-items: center;
+  margin-top: 80px;
+
+}
+.flexbox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flex-1{
+  display: flex;
+  flex-direction: row;
+   
+}
+.button1{
+ margin-right: 40px;
+ border: none;
+
+}
+.button2{
+  margin-left: 40px;
+  border: none;
+}
