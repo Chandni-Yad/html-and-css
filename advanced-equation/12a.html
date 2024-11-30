@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <title >document</title>
+</head>
+<body>
+    <button onclick="" class="js-buttons">Click</button>
+    <button class="js-button" onclick="   
+    const button = document.querySelector('.js-button');
+ button.innerHTML = 'Loading';
+ setTimeout(function(){
+    button.innerHTML = 'Finished';
+ },3000);">Finish</button>
+<p class="js-message"></p>
+ <button onclick ="  updateButton();">Add to Cart</button>
+    <script>
+
+   const buttonElement =  document.querySelector('.js-buttons');
+   const eventListener = () =>{
+    console.log('click');
+   }
+buttonElement.addEventListener('click',eventListener
+);
+
+buttonElement.removeEventListener('click',eventListener
+) 
+buttonElement.addEventListener('click', () => { console.log('click2')}
+
+    
+);
+
+
+        let timeoutid;
+     function updateButton(){
+        const buttons = document.querySelector(".js-message");
+            buttons.innerHTML = 'Added';
+          
+         clearTimeout(timeoutid);
+        timeoutid =setTimeout(function(){
+            buttons.innerHTML = ''
+           },2000) ; 
+        }    
+     
+/*
+function greeting (){
+console.log('hello');
+}
+greeting();
+const num = 2;// function are values. function without name is called anonymus function
+const function1 = function (){
+    console.log('hello2');
+   
+};
+console.log(function1);
+console.log(typeof function1);
+function1();
+
+const object = {
+    num: 2,
+    fun: function (){
+        console.log('hello3');
+    }
+}
+object.fun();
+function display(param){
+console.log(param);
+}
+display(2);   this is passing value into function
+function run(param){
+param();
+
+}
+
+run(function(){
+  console.log('hello4')  ;
+});
+setTimeout(function(){ //this is aschronoymus code
+    console.log('timeout');
+    console.log('timeout2')
+ },3000 );
+// aschronous code
+console.log('next line')
+setInterval(function(){ //this is aschronoymus code
+    console.log('timeout');},3000);*/
+[
+ 'make dinner',
+ 'wash dishes' ,
+ 'wash youtube'  
+].forEach((value,index)  => {
+   console.log(index)
+    console.log(value);
+})
+const add = function(){
+  console.log(2+3) ; 
+}
+function runTwice(fun){
+   fun() ;
+   fun();
+}
+runTwice(function(){console.log('12b');})
+
+
+ const arrowFunction = (param1 , param2)=>
+  {
+    console.log('hello');
+    return 5;
+ }
+arrowFunction();
+const oneParam = param => {
+console.log(param+1)
+}
+oneParam(2);
+const oneLin = () => 2+3;
+console.log(oneLin());
+
+
+const object2 = {
+   method: () => {
+
+   } ,
+  
+}
+
+    </script>
+</body>
+</html>
